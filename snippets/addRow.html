@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Last Snippet</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css'>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.css">
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+
+    <style type="text/css">
+
+body {
+    color: #fff;
+    overflow-x: hidden;
+    height: 100%;
+    background-color: #000;
+    background-repeat: no-repeat;
+}
+
+.container-fluid {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.card {
+    background-color: #424242;
+    padding: 40px 10px;
+}
+
+.text-grey {
+    color: #9E9E9E;
+}
+
+.fa {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.ptr {
+    cursor: pointer;
+}
+
+input, select {
+    padding: 2px 6px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    border-radius: none;
+    box-sizing: border-box;
+    color: #fff;
+    background-color: transparent;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-align: center !important;
+}
+
+input:focus, select:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border-bottom: 1px solid #00C853;
+    outline-width: 0;
+}
+
+select option {
+    background-color: #616161;
+}
+
+select option:focus {
+    background-color: #00C853 !important;
+}
+
+::placeholder {
+    color: #fff;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: #fff;
+}
+
+::-ms-input-placeholder {
+    color: #fff;
+}
+
+button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0;
+}
+
+.btn {
+    border-radius: 50px;
+    width: 120px;
+}
+
+.exit {
+    border: 1px solid #9E9E9E;
+    color: #9E9E9E;
+    background-color: transparent;
+}
+
+.exit:hover {
+    border: 1px solid #9E9E9E;
+    color: #000 !important;
+    background-color: #9E9E9E;
+}
+
+@media screen and (max-width: 768px) {
+    .mob {
+        width: 70%;
+    }
+
+    select.mob {
+        width: 50%;
+    }
+}
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container-fluid px-1 px-sm-4 py-5 mx-auto">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-10 col-lg-9 col-xl-8">
+            <div class="card border-0">
+                <div class="row px-3">
+                    <div class="col-sm-2">
+                        <label class="text-grey mt-1 mb-3">Open Hours</label>
+                    </div>
+                    <div class="col-sm-10 list">
+                        <div class="mb-2 row justify-content-between px-3">
+                            <select class="mb-2 mob">
+                                <option value="opt1">Mon-Fri</option>
+                                <option value="opt2">Sat-Sun</option>
+                            </select>
+                            <div class="mob">
+                                <label class="text-grey mr-1">From</label>
+                                <input class="ml-1" type="time" name="from">
+                            </div>
+                            <div class="mob mb-2">
+                                <label class="text-grey mr-4">To</label>
+                                <input class="ml-1" type="time" name="to">
+                            </div>
+                            <div class="mt-1 cancel fa fa-times text-danger"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row px-3 mt-3">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-10">
+                        <div class="row px-3">
+                            <div class="fa fa-plus-circle text-success add"></div>
+                            <p class="text-success ml-3 add ptr">Add</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row px-3 mt-3 justify-content-center">
+                    <button class="btn exit mr-2">Cancel</button>
+                    <button class="btn btn-success ml-2">Done</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+$('.add').click(function(){
+    $(".list").append('<div class="mb-2 row justify-content-between px-3"> <select class="mob mb-2"> <option value="opt1">Mon-Fri</option> <option value="opt2">Sat-Sun</option> </select> <div class="mob"> <label class="text-grey mr-1">From</label> <input class="ml-1" type="time" name="from"> </div> <div class="mob mb-2"> <label class="text-grey mr-4">To</label> <input class="ml-1" type="time" name="to"> </div> <div class="mt-1 cancel fa fa-times text-danger"> </div> </div>');
+});
+
+$(document).on('click', '.cancel', function() {
+    $(this).parent().remove();
+});
+
+});
+
+</script>
+
+</body>
+</html>
