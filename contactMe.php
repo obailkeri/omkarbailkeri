@@ -3,9 +3,9 @@
     $result2="";
     if(isset($_POST['submit']))
     {
-        $email = "omkarbailkeri99@gmail.com";
+        $email = "agenta1b2@gmail.com";
         $name = "Me";
-        $body = '<h2>Name : '.$_POST['name'].'<br>Email : '.$_POST['email'].'<br>Message : '.$_POST['message'].'</h2>';
+        $body = '<h4>Name : '.$_POST['name'].'<br>Email : '.$_POST['email'].'<br>Message : '.$_POST['message'].'</h4>';
         $subject = 'Form Submitted By: '.$_POST['name'];
 
         $headers = array(
