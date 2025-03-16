@@ -341,6 +341,12 @@ textarea {
     height: 150px;
 }
 
+.contact-detail {
+    font-size: 22px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+}
+
 #overlay{
   position:fixed;
   z-index:99999;
@@ -428,8 +434,8 @@ textarea {
                 <div class="col-xl-7 col-md-7 col-sm-10 col-12 block px-5 text-center">
                     <h4 class="text-muted mt-4"><span class="text-dark fa fa-lightbulb-o mr-2"></span> Have something on your mind? </h4>
                     <h5 class="text-muted mb-3">Let's discuss and make something awesome!</h5>
-                    <h6 class="mt-5 mb-3"><span class="fa fa-whatsapp mr-3"></span>+91 7774047389</h6>
-                    <h6 class="mb-5"><span class="fa fa-envelope mr-3"></span>bailkeri.omkar@gmail.com</h6>
+                    <p class="mt-5 mb-3 contact-detail"><span class="fa fa-whatsapp mr-3"></span>+91 7774047389</p>
+                    <p class="mb-5 contact-detail"><span class="fa fa-envelope mr-3"></span>bailkeri.omkar@gmail.com</p>
                 </div>
             </div>
         </div>
@@ -438,13 +444,13 @@ textarea {
             <div class="row justify-content-center">
                 <div class="col-xl-7 col-md-7 col-sm-10 col-12 block px-5">
                     <h3 class="mt-4 text-muted mb-2">Leave a message</h3>
-                    <h6 class="text-center text-success"><?= $result1; ?></h6>
-                    <h6 class="text-center text-danger"><?= $result2; ?></h6>
-                    <form id="contact-form" method="post" action="">
+                    <!-- <h6 class="text-center text-success"><?= $result1; ?></h6>
+                    <h6 class="text-center text-danger"><?= $result2; ?></h6> -->
+                    <form id="contact-form" method="post" action="https://formspree.io/f/xvgkgrwr">
                         <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
                         <input type="email" name="email" class="form-control" placeholder="Your Email Id" required="">
                         <textarea name="message" class="form-control" placeholder="Your Message" required=""></textarea>
-                        <button name="submit" type="submit" class="btn btn-dark submit mb-5" value="SEND MESSAGE">SEND MESSAGE</button>
+                        <button type="submit" class="btn btn-dark submit mb-5">SEND MESSAGE</button>
                     </form>
                 </div>
             </div>
@@ -460,7 +466,7 @@ textarea {
             <p style="font-size: 35px;">Omkar Bailkeri</p>
             <p class="mb-2 mt-3"><span class="fa fa-envelope mr-2"></span> bailkeri.omkar@gmail.com</p>
             <p class="mb-2"><span class="fa fa-phone ml-1 mr-2"></span> +91 7774047389</p>
-            <a href="contactMe.php"><button class="btn btn-light mt-3"><b>SEND MESSAGE</b></button></a>
+            <a href="contactMe.html"><button class="btn btn-light mt-3"><b>SEND MESSAGE</b></button></a>
         </div>
         <div class="col-md-3 text-left mt-4 hideme">
             <p style="font-size: 26px;">... Links ...</p>
